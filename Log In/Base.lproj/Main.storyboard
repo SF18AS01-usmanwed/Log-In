@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M63-ZE-Nes">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Log_In" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCL-pX-05V">
+                                <rect key="frame" x="77" y="159" width="222" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w5m-Da-d31">
+                                <rect key="frame" x="77" y="197" width="222" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdV-mB-5Wb">
+                                <rect key="frame" x="220" y="284" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forgot PassWord"/>
+                                <connections>
+                                    <action selector="forgotPassWordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WPi-ZP-PEt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZb-n4-wCS">
+                                <rect key="frame" x="42" y="284" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forgot User Name"/>
+                                <connections>
+                                    <action selector="forgotUserButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j4P-sP-emy"/>
+                                    <segue destination="IjP-yp-PQM" kind="show" identifier="forgotUserName" id="K81-sY-GKC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tS-sk-XaE">
+                                <rect key="frame" x="159" y="235" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6g-O7-53a"/>
+                                    <segue destination="IjP-yp-PQM" kind="show" identifier="forgot PassWord" id="yjM-xC-AWj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log In" largeTitleDisplayMode="always" id="A7F-LF-o4U"/>
+                    <connections>
+                        <outlet property="forgotPassWordButton" destination="xdV-mB-5Wb" id="cEl-1x-MZd"/>
+                        <outlet property="forgotUserNameButton" destination="AZb-n4-wCS" id="Udc-MR-WMx"/>
+                        <outlet property="logInButton" destination="5tS-sk-XaE" id="ubg-3E-dCr"/>
+                        <outlet property="textField" destination="dCL-pX-05V" id="G6s-QZ-20b"/>
+                        <segue destination="IjP-yp-PQM" kind="show" identifier="LogInButton" id="h7P-dR-eBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="-564.46776611694156"/>
+        </scene>
+        <!--Landing-->
+        <scene sceneID="8tH-sU-NtS">
+            <objects>
+                <viewController id="IjP-yp-PQM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eIu-G9-wlo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.66666668650000005" green="0.16867173199999999" blue="0.090785795799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="HrD-az-IRv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Landing" largeTitleDisplayMode="always" id="oIj-uo-NO1">
+                        <barButtonItem key="rightBarButtonItem" title="Pop" id="Rnp-ZJ-6Qu">
+                            <connections>
+                                <segue destination="kOx-Uy-Tem" kind="unwind" unwindAction="unwindToLogInUnwindSegue:" id="NVY-5x-F4D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQj-Ei-bJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kOx-Uy-Tem" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="-564"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OlP-mh-vGX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M63-ZE-Nes" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="oPr-cp-LQi">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lwA-G4-lCD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHF-8x-hmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="-564"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="h7P-dR-eBt"/>
+    </inferredMetricsTieBreakers>
+</document>
